@@ -1,7 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { iTodo } from '../models/itodo';
-import { BehaviorSubject, filter, find, map, Observable, pipe } from 'rxjs';
+import {
+  BehaviorSubject,
+  filter,
+  find,
+  map,
+  Observable,
+  pipe,
+  Subject,
+} from 'rxjs';
 import { iUser } from '../models/iuser';
 
 @Injectable({
@@ -11,6 +19,7 @@ export class TodoService {
   apiUrl = 'http://localhost:3000/todos';
 
   todosWithAuthor$ = new BehaviorSubject<iTodo[]>([]);
+  query$ = new BehaviorSubject<string>('');
 
   constructor(private http: HttpClient) {}
 
@@ -32,6 +41,17 @@ export class TodoService {
           };
         });
       })
+    );
+  }
+
+  searchTodo(): iTodo[] {
+    let todos = this.todosWithAuthor$.getValue();
+
+    let query = this.query$.value;
+    return todos.filter(
+      (todo) =>
+        todo.todo.toLowerCase().includes(query.toLowerCase()) ||
+        todo.author.toLowerCase().includes(query.toLowerCase())
     );
   }
 

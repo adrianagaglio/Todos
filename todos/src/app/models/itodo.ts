@@ -3,5 +3,5 @@ export interface iTodo {
   todo: string;
   completed: boolean;
   userId: number;
-  author?: string;
+  author: string;
 }

@@ -24,4 +24,10 @@ export class ByuserComponent implements OnInit {
       .subscribe((users) => this.users.push(...users));
     this.userSvc.usersWithTodos$.next(this.users);
   }
+
+  ngDoCheck() {
+    if (this.userSvc.query$.value) {
+      this.users = this.userSvc.searchUser();
+    }
+  }
 }

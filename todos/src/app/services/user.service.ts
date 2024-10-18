@@ -13,6 +13,7 @@ export class UserService {
   apiUrl = 'http://localhost:3000/users';
 
   usersWithTodos$ = new BehaviorSubject<iUser[]>([]);
+  query$ = new BehaviorSubject<string>('');
 
   getUsers(): Observable<iUser[]> {
     return this.http.get<iUser[]>(this.apiUrl);
@@ -37,5 +38,18 @@ export class UserService {
   getUserById(id: number) {
     let users = this.usersWithTodos$.getValue();
     return users.find((user) => user.id === id);
+  }
+
+  searchUser(): iUser[] {
+    let users = this.usersWithTodos$.getValue();
+    let query = this.query$.value;
+    return users.filter(
+      (user) =>
+        user.firstName.toLowerCase().includes(query.toLowerCase()) ||
+        user.lastName.toLowerCase().includes(query.toLowerCase()) ||
+        user.todos.find((todo) =>
+          todo.todo.toLowerCase().includes(query.toLowerCase())
+        )
+    );
   }
 }

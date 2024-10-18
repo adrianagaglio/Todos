@@ -3,7 +3,7 @@ import { iTodo } from '../../models/itodo';
 import { TodoService } from '../../services/todo.service';
 import { UserService } from '../../services/user.service';
 import { iUser } from '../../models/iuser';
-import { map } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +24,13 @@ export class HomeComponent implements OnInit {
     this.todoSvc
       .getTodosWithAuthor(this.users)
       .subscribe((todos) => this.todos.push(...todos));
+    console.log(this.todos);
     this.todoSvc.todosWithAuthor$.next(this.todos);
+  }
+
+  ngDoCheck() {
+    if (this.todoSvc.query$.value) {
+      this.todos = this.todoSvc.searchTodo();
+    }
   }
 }
