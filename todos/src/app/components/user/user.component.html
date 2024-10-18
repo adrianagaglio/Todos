@@ -7,6 +7,22 @@
       Assigned to:
       {{ user.firstName + " " + user.lastName }}
     </h5>
+    <div class="position-relative">
+      <button (click)="showForm()" class="border-0 badge bg-primary">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+      <div *ngIf="show" class="position-absolute bottom-50 z-3 w-fixed-250 p-2">
+        <form (submit)="addTask()">
+          <input
+            class="input-group-text w-100 text-start"
+            type="text"
+            name="newTask"
+            [(ngModel)]="newTask"
+            placeholder="Add a new task..."
+          />
+        </form>
+      </div>
+    </div>
     <span>{{
       taskLeft > 0 ? taskLeft + " tasks to complete" : "All done"
     }}</span>

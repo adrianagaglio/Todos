@@ -3,7 +3,7 @@
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 
-$widths: 25, 35, 50, 75, 100, 150;
+$widths: 25, 35, 50, 75, 100, 150, 200, 250;
 
 @each $width in $widths {
   .w-fixed-#{$width} {

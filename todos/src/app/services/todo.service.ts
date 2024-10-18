@@ -79,4 +79,8 @@ export class TodoService {
   deleteTodo(id: number) {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
+
+  addTask(task: Partial<iTodo>): Observable<iTodo> {
+    return this.http.post<iTodo>(this.apiUrl, task);
+  }
 }

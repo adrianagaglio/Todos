@@ -13,6 +13,8 @@ export class UserComponent implements OnInit {
   @Input() id!: number;
   user!: iUser;
   taskLeft!: number;
+  newTask!: string;
+  show: boolean = false;
 
   constructor(private userSvc: UserService, private todoSvc: TodoService) {}
 
@@ -25,6 +27,20 @@ export class UserComponent implements OnInit {
   delete(id: number) {
     this.todoSvc.deleteTodo(id).subscribe();
     this.user.todos = this.user.todos.filter((todo) => todo.id !== id);
+  }
+
+  showForm() {
+    this.show = true;
+  }
+
+  addTask() {
+    let task: Partial<iTodo> = {
+      todo: this.newTask,
+      completed: false,
+      userId: this.user.id,
+      author: this.user.firstName + ' ' + this.user.lastName,
+    };
+    this.show = false;
   }
 
   ngDoCheck() {
