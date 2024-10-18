@@ -1,0 +1,12 @@
+<div *ngIf="todo" class="card shadow-sm p-3">
+  <div class="d-flex align-items-start gap-2">
+    <input
+      class="form-check-input mt-0 h-fixed-50"
+      type="checkbox"
+      name="status"
+    />
+    <h6 class="mb-0 flex-grow-1">{{ todo.todo }}</h6>
+    <ng-content select="[slot='2']"></ng-content>
+  </div>
+  <ng-content select="[slot='1']"></ng-content>
+</div>

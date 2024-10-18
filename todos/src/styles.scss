@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+$widths: 25, 35, 50, 75, 100, 150;
+
+@each $width in $widths {
+  .w-fixed-#{$width} {
+    width: #{$width}px;
+  }
+}
+
+$heights: 25, 35, 50, 75, 100, 150;
+
+@each $height in $heights {
+  .h-fixed-#{height} {
+    height: #{$height}px;
+  }
+}
+
+// $new-info: #68dbff;
+// $new-brown: #5d2c02;
+// $new-orange: #ff7917;
+
+// $new-theme-colors: (
+//   "info": $new-info,
+//   "brown": $new-brown,
+//   "orange": $new-orange,
+// );
+
+// $theme-colors: map-merge($theme-colors, $new-theme-colors);
+
+@import "bootstrap/scss/bootstrap";
+
+.authorName {
+  font-family: "Onest", sans-serif;
+  font-size: 0.85rem;
+  span {
+    font-weight: 500;
+    letter-spacing: -0.5px;
+  }
+}
