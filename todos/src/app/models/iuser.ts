@@ -6,5 +6,5 @@ export interface iUser {
   email: string;
   image: string;
   title: string;
-  todos?: iTodo[];
+  todos: iTodo[];
 }

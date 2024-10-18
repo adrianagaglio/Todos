@@ -20,8 +20,8 @@ export class TodoService {
 
   getTodosWithAuthor(userArr: iUser[]): Observable<iTodo[]> {
     return this.getTodos().pipe(
-      map((todos) => {
-        return todos.map((todo) => {
+      map((todos: iTodo[]) => {
+        return todos.map((todo: iTodo) => {
           let authorFound = userArr.find((user) => user.id === todo.userId);
 
           if (!authorFound) return todo;
@@ -35,7 +35,7 @@ export class TodoService {
     );
   }
 
-  getToByAuthorId(id: number) {
+  getTodoById(id: number) {
     let todos = this.todosWithAuthor$.getValue();
     return todos.find((todo) => todo.id === id);
   }

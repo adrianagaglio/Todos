@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { iUser } from '../models/iuser';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, filter, map, Observable } from 'rxjs';
+import { iTodo } from '../models/itodo';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,30 @@ export class UserService {
 
   apiUrl = 'http://localhost:3000/users';
 
+  usersWithTodos$ = new BehaviorSubject<iUser[]>([]);
+
   getUsers(): Observable<iUser[]> {
     return this.http.get<iUser[]>(this.apiUrl);
+  }
+
+  getUsersWithTodos(todosArr: iTodo[]): Observable<iUser[]> {
+    return this.getUsers()
+      .pipe(
+        map((users: iUser[]) => {
+          return users.map((user: iUser) => {
+            let tasksFound = todosArr.filter((todo) => todo.userId === user.id);
+            return {
+              ...user,
+              todos: tasksFound,
+            };
+          });
+        })
+      )
+      .pipe(map((users) => users.filter((user) => user.todos.length > 0)));
+  }
+
+  getUserById(id: number) {
+    let users = this.usersWithTodos$.getValue();
+    return users.find((user) => user.id === id);
   }
 }

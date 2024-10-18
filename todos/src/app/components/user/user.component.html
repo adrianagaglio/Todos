@@ -2,16 +2,25 @@
   <div
     class="card-header bg-white border-0 mb-3 d-flex align-items-center p-0 gap-2"
   >
-    <img
-      src="https://placehold.co/150"
-      class="w-fixed-35 h-fixed-35 rounded-circle"
-    />
-    <h5 class="mb-0 flex-grow-1">Author Name</h5>
-    <span># tasks left</span>
+    <img src="{{ user.image }}" class="w-fixed-35 h-fixed-35 rounded-circle" />
+    <h5 class="mb-0 flex-grow-1">
+      Assigned to: {{ user.firstName + " " + user.lastName }}
+    </h5>
+    <span>{{
+      taskLeft > 0 ? taskLeft + " tasks to complete" : "All done"
+    }}</span>
   </div>
   <div class="d-flex flex-column gap-2">
-    <app-task> <span slot="2" class="badge bg-danger">Status</span></app-task>
-    <app-task> <span slot="2" class="badge bg-danger">Status</span></app-task>
-    <app-task> <span slot="2" class="badge bg-danger">Status</span></app-task>
+    <app-task *ngFor="let todo of user.todos" [id]="todo.id"
+      ><span
+        slot="2"
+        [ngClass]="{
+          'bg-success': todo.completed,
+          'bg-danger': !todo.completed
+        }"
+        class="badge"
+        >{{ todo.completed ? "Completed" : "Uncompleted" }}</span
+      ></app-task
+    >
   </div>
 </div>

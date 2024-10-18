@@ -1,16 +1,7 @@
-<div class="container py-3">
+<div *ngIf="users.length > 0" class="container py-3">
   <div class="row row-cols-2 g-5">
-    <div class="col">
-      <app-user> </app-user>
-    </div>
-    <div class="col">
-      <app-user></app-user>
-    </div>
-    <div class="col">
-      <app-user></app-user>
-    </div>
-    <div class="col">
-      <app-user></app-user>
+    <div *ngFor="let user of users" class="col">
+      <app-user [id]="user.id"></app-user>
     </div>
   </div>
 </div>

@@ -15,7 +15,7 @@ export class TaskComponent implements OnInit {
   constructor(private todoSvc: TodoService) {}
 
   ngOnInit() {
-    let found = this.todoSvc.getToByAuthorId(this.id);
+    let found = this.todoSvc.getTodoById(this.id);
     if (found) this.todo = found;
   }
 
