@@ -18,7 +18,6 @@ export class ByuserComponent implements OnInit {
 
   ngOnInit(): void {
     this.todos.push(...this.todoSvc.todosWithAuthor$.getValue());
-
     this.userSvc
       .getUsersWithTodos(this.todos)
       .subscribe((users) => this.users.push(...users));

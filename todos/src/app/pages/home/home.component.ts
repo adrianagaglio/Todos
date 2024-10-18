@@ -12,20 +12,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   todos: iTodo[] = [];
-  users: iUser[] = [];
 
-  constructor(private todoSvc: TodoService, private userSvc: UserService) {}
+  constructor(private todoSvc: TodoService) {}
 
   ngOnInit() {
-    this.userSvc.getUsers().subscribe((users) => {
-      this.users.push(...users);
-    });
-
-    this.todoSvc
-      .getTodosWithAuthor(this.users)
-      .subscribe((todos) => this.todos.push(...todos));
-    console.log(this.todos);
-    this.todoSvc.todosWithAuthor$.next(this.todos);
+    this.todoSvc.todosWithAuthor$.subscribe((todos) => (this.todos = todos));
   }
 
   ngDoCheck() {

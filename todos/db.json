@@ -10,16 +10,9 @@
     {
       "id": 2,
       "todo": "Memorize the fifty states and their capitals",
-      "completed": true,
+      "completed": false,
       "userId": 48,
       "author": "Felicita Gibson"
-    },
-    {
-      "id": 3,
-      "todo": "Watch a classic movie",
-      "completed": false,
-      "userId": 4,
-      "author": "Miles Cummerata"
     },
     {
       "id": 4,
@@ -31,7 +24,7 @@
     {
       "id": 5,
       "todo": "Solve a Rubik's cube",
-      "completed": false,
+      "completed": true,
       "userId": 31,
       "author": "Luciano Sauer"
     },
@@ -108,20 +101,6 @@
       "userId": 24
     },
     {
-      "id": 17,
-      "todo": "Create a cookbook with favorite recipes",
-      "completed": false,
-      "userId": 1,
-      "author": "Terry Medhurst"
-    },
-    {
-      "id": 18,
-      "todo": "Bake a pie with some friends",
-      "completed": false,
-      "userId": 1,
-      "author": "Terry Medhurst"
-    },
-    {
       "id": 19,
       "todo": "Create a compost pile",
       "completed": false,
@@ -168,13 +147,15 @@
       "id": 26,
       "todo": "Learn calligraphy",
       "completed": false,
-      "userId": 50
+      "userId": 50,
+      "author": "Johnathon Predovic"
     },
     {
       "id": 27,
       "todo": "Have a photo session with some friends",
       "completed": false,
-      "userId": 14
+      "userId": 14,
+      "author": "Enoch Lynch"
     },
     {
       "id": 28,
@@ -265,7 +246,8 @@
       "id": 42,
       "todo": "Wash car",
       "completed": false,
-      "userId": 15
+      "userId": 15,
+      "author": "Jeanne Halvorson"
     },
     {
       "id": 43,
@@ -313,7 +295,8 @@
       "id": 50,
       "todo": "Start a band",
       "completed": false,
-      "userId": 13
+      "userId": 13,
+      "author": "Trace Douglas"
     },
     {
       "id": 51,
@@ -334,24 +317,11 @@
       "userId": 21
     },
     {
-      "id": 54,
-      "todo": "Start a daily journal",
-      "completed": false,
-      "userId": 1,
-      "author": "Terry Medhurst"
-    },
-    {
       "id": 55,
       "todo": "Clean out closet and donate the clothes I've outgrown",
       "completed": true,
       "userId": 2,
       "author": "Sheldon Quigley"
-    },
-    {
-      "id": 56,
-      "todo": "Go on a fishing trip with some friends",
-      "completed": false,
-      "userId": 15
     },
     {
       "id": 57,
@@ -365,12 +335,6 @@
       "todo": "Listen to a new podcast",
       "completed": true,
       "userId": 9
-    },
-    {
-      "id": 59,
-      "todo": "Color",
-      "completed": false,
-      "userId": 50
     },
     {
       "id": 60,
@@ -445,12 +409,6 @@
       "userId": 47
     },
     {
-      "id": 72,
-      "todo": "Rearrange and organize room",
-      "completed": false,
-      "userId": 9
-    },
-    {
       "id": 73,
       "todo": "Learn how to play a new sport",
       "completed": false,
@@ -472,13 +430,8 @@
       "id": 76,
       "todo": "Learn to play a new instrument",
       "completed": false,
-      "userId": 50
-    },
-    {
-      "id": 77,
-      "todo": "Resolve a problem I've been putting off",
-      "completed": true,
-      "userId": 17
+      "userId": 50,
+      "author": "Johnathon Predovic"
     },
     {
       "id": 78,
@@ -535,12 +488,6 @@
       "userId": 27
     },
     {
-      "id": 87,
-      "todo": "Go to the library and find an interesting book",
-      "completed": false,
-      "userId": 9
-    },
-    {
       "id": 88,
       "todo": "Configure two-factor authentication on accounts",
       "completed": false,
@@ -557,12 +504,6 @@
       "todo": "Create or update resume",
       "completed": false,
       "userId": 24
-    },
-    {
-      "id": 91,
-      "todo": "Prepare a 72-hour kit",
-      "completed": true,
-      "userId": 15
     },
     {
       "id": 92,
@@ -598,7 +539,8 @@
       "id": 97,
       "todo": "Do a jigsaw puzzle",
       "completed": false,
-      "userId": 11
+      "userId": 11,
+      "author": "Marcel Jones"
     },
     {
       "id": 98,
@@ -662,12 +604,6 @@
       "todo": "Shred old documents I don't need anymore",
       "completed": false,
       "userId": 11
-    },
-    {
-      "id": 108,
-      "todo": "Learn to write with nondominant hand",
-      "completed": true,
-      "userId": 27
     },
     {
       "id": 109,
@@ -771,12 +707,6 @@
       "todo": "Learn how to beatbox",
       "completed": false,
       "userId": 44
-    },
-    {
-      "id": 126,
-      "todo": "Take a bubble bath",
-      "completed": true,
-      "userId": 15
     },
     {
       "id": 127,

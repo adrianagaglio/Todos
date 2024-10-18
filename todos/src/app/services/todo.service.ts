@@ -8,6 +8,7 @@ import {
   map,
   Observable,
   pipe,
+  ReplaySubject,
   Subject,
 } from 'rxjs';
 import { iUser } from '../models/iuser';
@@ -20,6 +21,7 @@ export class TodoService {
 
   todosWithAuthor$ = new BehaviorSubject<iTodo[]>([]);
   query$ = new BehaviorSubject<string>('');
+  authorToDos$ = new ReplaySubject<iTodo[]>();
 
   constructor(private http: HttpClient) {}
 
@@ -72,5 +74,9 @@ export class TodoService {
 
   updateTodo(todo: iTodo): Observable<iTodo> {
     return this.http.put<iTodo>(`${this.apiUrl}/${todo.id}`, todo);
+  }
+
+  deleteTodo(id: number) {
+    return this.http.delete(`${this.apiUrl}/${id}`);
   }
 }

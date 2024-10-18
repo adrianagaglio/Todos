@@ -35,9 +35,9 @@ export class UserService {
       .pipe(map((users) => users.filter((user) => user.todos.length > 0)));
   }
 
-  getUserById(id: number) {
-    let users = this.usersWithTodos$.getValue();
-    return users.find((user) => user.id === id);
+  getUserById(id: number): iUser {
+    let users: iUser[] = this.usersWithTodos$.getValue();
+    return <iUser>users.find((user) => user.id === id);
   }
 
   searchUser(): iUser[] {
