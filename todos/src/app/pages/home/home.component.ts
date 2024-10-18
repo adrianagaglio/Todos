@@ -24,7 +24,6 @@ export class HomeComponent implements OnInit {
     this.todoSvc
       .getTodosWithAuthor(this.users)
       .subscribe((todos) => this.todos.push(...todos));
-
     this.todoSvc.todosWithAuthor$.next(this.todos);
   }
 }

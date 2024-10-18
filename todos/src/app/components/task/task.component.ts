@@ -18,4 +18,8 @@ export class TaskComponent implements OnInit {
     let found = this.todoSvc.getToByAuthorId(this.id);
     if (found) this.todo = found;
   }
+
+  update(todo: iTodo) {
+    this.todoSvc.updateTodo(todo).subscribe();
+  }
 }

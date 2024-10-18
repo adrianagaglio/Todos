@@ -8,10 +8,11 @@ import { iUser } from '../models/iuser';
   providedIn: 'root',
 })
 export class TodoService {
-  constructor(private http: HttpClient) {}
-
   apiUrl = 'http://localhost:3000/todos';
+
   todosWithAuthor$ = new BehaviorSubject<iTodo[]>([]);
+
+  constructor(private http: HttpClient) {}
 
   getTodos(): Observable<iTodo[]> {
     return this.http.get<iTodo[]>(this.apiUrl);
@@ -47,5 +48,9 @@ export class TodoService {
   getUncompleted() {
     let todos = this.todosWithAuthor$.getValue();
     return todos.filter((todo) => !todo.completed);
+  }
+
+  updateTodo(todo: iTodo): Observable<iTodo> {
+    return this.http.put<iTodo>(`${this.apiUrl}/${todo.id}`, todo);
   }
 }

@@ -9,20 +9,23 @@
     {
       "id": 2,
       "todo": "Memorize the fifty states and their capitals",
-      "completed": false,
-      "userId": 48
+      "completed": true,
+      "userId": 48,
+      "author": "Felicita Gibson"
     },
     {
       "id": 3,
       "todo": "Watch a classic movie",
       "completed": false,
-      "userId": 4
+      "userId": 4,
+      "author": "Miles Cummerata"
     },
     {
       "id": 4,
       "todo": "Contribute code or a monetary donation to an open-source software project",
-      "completed": false,
-      "userId": 48
+      "completed": true,
+      "userId": 48,
+      "author": "Felicita Gibson"
     },
     {
       "id": 5,
@@ -183,8 +186,9 @@
     {
       "id": 31,
       "todo": "Find a charity and donate to it",
-      "completed": true,
-      "userId": 35
+      "completed": false,
+      "userId": 35,
+      "author": "Jacklyn Schimmel"
     },
     {
       "id": 32,
