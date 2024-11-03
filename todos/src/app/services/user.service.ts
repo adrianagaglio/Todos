@@ -20,19 +20,18 @@ export class UserService {
   }
 
   getUsersWithTodos(todosArr: iTodo[]): Observable<iUser[]> {
-    return this.getUsers()
-      .pipe(
-        map((users: iUser[]) => {
-          return users.map((user: iUser) => {
-            let tasksFound = todosArr.filter((todo) => todo.userId === user.id);
-            return {
-              ...user,
-              todos: tasksFound,
-            };
-          });
-        })
-      )
-      .pipe(map((users) => users.filter((user) => user.todos.length > 0)));
+    return this.getUsers().pipe(
+      map((users: iUser[]) => {
+        return users.map((user: iUser) => {
+          let tasksFound = todosArr.filter((todo) => todo.userId === user.id);
+          return {
+            ...user,
+            todos: tasksFound,
+          };
+        });
+      })
+    );
+    // .pipe(map((users) => users.filter((user) => user.todos.length > 0)));
   }
 
   getUserById(id: number): iUser {
@@ -51,5 +50,10 @@ export class UserService {
           todo.todo.toLowerCase().includes(query.toLowerCase())
         )
     );
+  }
+
+  addNewUser(newUser: Partial<iUser>): Observable<iUser> {
+    let user = { ...newUser, todos: [] };
+    return this.http.post<iUser>(this.apiUrl, user);
   }
 }

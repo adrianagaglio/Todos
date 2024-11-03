@@ -16,6 +16,7 @@ import { UncompletedComponent } from './pages/uncompleted/uncompleted.component'
 import { ByuserComponent } from './pages/byuser/byuser.component';
 import { TaskComponent } from './components/task/task.component';
 import { UserComponent } from './components/user/user.component';
+import { FormModalComponent } from './components/form-modal/form-modal.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { UserComponent } from './components/user/user.component';
     ByuserComponent,
     TaskComponent,
     UserComponent,
+    FormModalComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [provideHttpClient()],
