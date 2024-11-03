@@ -7,12 +7,19 @@
       Assigned to:
       {{ user.firstName + " " + user.lastName }}
     </h5>
+    <span>{{
+      taskLeft > 0 ? taskLeft + " tasks to complete" : "All done"
+    }}</span>
     <div class="position-relative">
       <button (click)="showForm()" class="border-0 badge bg-primary">
-        <i class="fa-solid fa-plus"></i>
+        <i class="fa-solid fa-plus" *ngIf="!show"></i>
+        <i class="fa-solid fa-minus" *ngIf="show"></i>
       </button>
-      <div *ngIf="show" class="position-absolute bottom-50 z-3 w-fixed-250 p-2">
-        <form (submit)="addTask()">
+      <div
+        *ngIf="show"
+        class="position-absolute top-50 end-0 z-3 w-fixed-250 p-2 mt-3"
+      >
+        <form (submit)="addTask()" class="p-3 shadow-lg bg-light rounded-3">
           <input
             class="input-group-text w-100 text-start"
             type="text"
@@ -23,9 +30,6 @@
         </form>
       </div>
     </div>
-    <span>{{
-      taskLeft > 0 ? taskLeft + " tasks to complete" : "All done"
-    }}</span>
   </div>
   <div class="d-flex flex-column gap-2">
     <app-task *ngFor="let todo of user.todos" [id]="todo.id">

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "todo": "Do something nice for someone I care about",
-      "completed": true,
+      "completed": false,
       "userId": 26,
       "author": "Griffin Braun"
     },
@@ -24,7 +24,7 @@
     {
       "id": 5,
       "todo": "Solve a Rubik's cube",
-      "completed": true,
+      "completed": false,
       "userId": 31,
       "author": "Luciano Sauer"
     },
@@ -59,14 +59,14 @@
     {
       "id": 10,
       "todo": "Have a football scrimmage with some friends",
-      "completed": true,
+      "completed": false,
       "userId": 19,
       "author": "Gust Purdy"
     },
     {
       "id": 11,
       "todo": "Text a friend I haven't talked to in a long time",
-      "completed": true,
+      "completed": false,
       "userId": 39,
       "author": "Salvatore Fisher"
     },
@@ -178,7 +178,7 @@
     {
       "id": 30,
       "todo": "Take cat on a walk",
-      "completed": true,
+      "completed": false,
       "userId": 15,
       "author": "Jeanne Halvorson"
     },
@@ -899,6 +899,13 @@
       "userId": 1,
       "author": "Terry Medhurst",
       "id": 161
+    },
+    {
+      "todo": "Prepare lunch",
+      "completed": false,
+      "userId": 1,
+      "author": "Terry Medhurst",
+      "id": 162
     }
   ],
   "users": [

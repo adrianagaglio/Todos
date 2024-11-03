@@ -30,7 +30,7 @@ export class UserComponent implements OnInit {
   }
 
   showForm() {
-    this.show = true;
+    this.show = !this.show;
   }
 
   addTask() {
@@ -40,7 +40,7 @@ export class UserComponent implements OnInit {
       userId: this.user.id,
       author: this.user.firstName + ' ' + this.user.lastName,
     };
-    this.todoSvc.addTask(task).subscribe();
+    this.todoSvc.addTask(task).subscribe((res) => this.user.todos.push(res));
     this.show = false;
   }
 
