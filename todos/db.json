@@ -31,14 +31,14 @@
     {
       "id": 6,
       "todo": "Bake pastries for me and neighbor",
-      "completed": true,
+      "completed": false,
       "userId": 39,
       "author": "Salvatore Fisher"
     },
     {
       "id": 7,
       "todo": "Go see a Broadway production",
-      "completed": true,
+      "completed": false,
       "userId": 32,
       "author": "Kaya Emard"
     },
@@ -46,12 +46,13 @@
       "id": 8,
       "todo": "Write a thank you letter to an influential person in my life",
       "completed": false,
-      "userId": 13
+      "userId": 13,
+      "author": "Trace Douglas"
     },
     {
       "id": 9,
       "todo": "Invite some friends over for a game night",
-      "completed": true,
+      "completed": false,
       "userId": 47,
       "author": "Coralie Boyle"
     },
@@ -65,13 +66,14 @@
     {
       "id": 11,
       "todo": "Text a friend I haven't talked to in a long time",
-      "completed": false,
-      "userId": 39
+      "completed": true,
+      "userId": 39,
+      "author": "Salvatore Fisher"
     },
     {
       "id": 12,
       "todo": "Organize pantry",
-      "completed": true,
+      "completed": false,
       "userId": 39,
       "author": "Salvatore Fisher"
     },
@@ -79,12 +81,13 @@
       "id": 13,
       "todo": "Buy a new house decoration",
       "completed": false,
-      "userId": 16
+      "userId": 16,
+      "author": "Trycia Fadel"
     },
     {
       "id": 14,
       "todo": "Plan a vacation I've always wanted to take",
-      "completed": true,
+      "completed": false,
       "userId": 28,
       "author": "Kody Terry"
     },
@@ -97,8 +100,9 @@
     {
       "id": 16,
       "todo": "Draw and color a Mandala",
-      "completed": false,
-      "userId": 24
+      "completed": true,
+      "userId": 24,
+      "author": "Jocelyn Schuster"
     },
     {
       "id": 19,
@@ -123,13 +127,15 @@
       "id": 22,
       "todo": "Research a topic interested in",
       "completed": false,
-      "userId": 4
+      "userId": 4,
+      "author": "Miles Cummerata"
     },
     {
       "id": 23,
       "todo": "Plan a trip to another country",
-      "completed": true,
-      "userId": 37
+      "completed": false,
+      "userId": 37,
+      "author": "Delfina Ziemann"
     },
     {
       "id": 24,
@@ -172,8 +178,9 @@
     {
       "id": 30,
       "todo": "Take cat on a walk",
-      "completed": false,
-      "userId": 15
+      "completed": true,
+      "userId": 15,
+      "author": "Jeanne Halvorson"
     },
     {
       "id": 31,
@@ -228,7 +235,8 @@
       "id": 39,
       "todo": "Go for a run",
       "completed": false,
-      "userId": 16
+      "userId": 16,
+      "author": "Trycia Fadel"
     },
     {
       "id": 40,
@@ -288,8 +296,9 @@
     {
       "id": 49,
       "todo": "Mow neighbor's lawn",
-      "completed": false,
-      "userId": 14
+      "completed": true,
+      "userId": 14,
+      "author": "Enoch Lynch"
     },
     {
       "id": 50,
@@ -301,8 +310,9 @@
     {
       "id": 51,
       "todo": "Organize music collection",
-      "completed": false,
-      "userId": 7
+      "completed": true,
+      "userId": 7,
+      "author": "Oleta Abbott"
     },
     {
       "id": 52,
@@ -557,7 +567,7 @@
     {
       "id": 100,
       "todo": "Learn a new programming language",
-      "completed": false,
+      "completed": true,
       "userId": 1,
       "author": "Terry Medhurst"
     },
@@ -711,8 +721,9 @@
     {
       "id": 127,
       "todo": "Prepare a dish from a foreign culture",
-      "completed": false,
-      "userId": 7
+      "completed": true,
+      "userId": 7,
+      "author": "Oleta Abbott"
     },
     {
       "id": 128,
@@ -729,8 +740,9 @@
     {
       "id": 130,
       "todo": "Learn about a distributed version control system such as Git",
-      "completed": true,
-      "userId": 4
+      "completed": false,
+      "userId": 4,
+      "author": "Miles Cummerata"
     },
     {
       "id": 131,
@@ -791,13 +803,6 @@
       "todo": "Write a short story",
       "completed": true,
       "userId": 48
-    },
-    {
-      "id": 141,
-      "todo": "Visit a nearby museum",
-      "completed": false,
-      "userId": 1,
-      "author": "Terry Medhurst"
     },
     {
       "id": 142,
@@ -862,14 +867,7 @@
     },
     {
       "todo": "task prova",
-      "completed": false,
-      "userId": 1,
-      "author": "Terry Medhurst",
-      "id": 155
-    },
-    {
-      "todo": "task prova",
-      "completed": false,
+      "completed": true,
       "userId": 1,
       "author": "Terry Medhurst",
       "id": 156
@@ -890,10 +888,17 @@
     },
     {
       "todo": "Prova task",
-      "completed": false,
+      "completed": true,
       "userId": 7,
       "author": "Oleta Abbott",
       "id": 159
+    },
+    {
+      "todo": "Go to the cinema",
+      "completed": true,
+      "userId": 1,
+      "author": "Terry Medhurst",
+      "id": 161
     }
   ],
   "users": [
