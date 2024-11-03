@@ -1,7 +1,7 @@
 <div class="container py-3">
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
     <div *ngFor="let todo of todos" class="col">
-      <app-task [id]="todo.id">
+      <app-task [id]="todo.id" [todo]="todo">
         <div slot="1" class="mt-3 d-flex flex-column">
           <p class="authorName mb-1">
             Assigned to: <span>{{ todo.author }}</span>

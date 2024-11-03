@@ -40,7 +40,10 @@ export class UserComponent implements OnInit {
       userId: this.user.id,
       author: this.user.firstName + ' ' + this.user.lastName,
     };
-    this.todoSvc.addTask(task).subscribe((res) => this.user.todos.push(res));
+    this.todoSvc.addTask(task).subscribe((res) => {
+      let newTask = res;
+      this.user.todos.push(newTask);
+    });
     this.show = false;
   }
 

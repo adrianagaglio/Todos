@@ -9,8 +9,9 @@ import { iTodo } from '../../models/itodo';
 })
 export class TaskComponent implements OnInit {
   @Input() id!: number;
+  @Input() todo!: iTodo;
 
-  todo!: iTodo;
+  // todo!: iTodo;
 
   constructor(private todoSvc: TodoService) {}
 

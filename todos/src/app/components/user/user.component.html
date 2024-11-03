@@ -32,7 +32,7 @@
     </div>
   </div>
   <div class="d-flex flex-column gap-2">
-    <app-task *ngFor="let todo of user.todos" [id]="todo.id">
+    <app-task *ngFor="let todo of user.todos" [todo]="todo">
       <button
         *ngIf="todo.completed"
         slot="2"

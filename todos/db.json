@@ -3,14 +3,14 @@
     {
       "id": 1,
       "todo": "Do something nice for someone I care about",
-      "completed": false,
+      "completed": true,
       "userId": 26,
       "author": "Griffin Braun"
     },
     {
       "id": 2,
       "todo": "Memorize the fifty states and their capitals",
-      "completed": false,
+      "completed": true,
       "userId": 48,
       "author": "Felicita Gibson"
     },
@@ -228,8 +228,9 @@
     {
       "id": 38,
       "todo": "Have a bonfire with close friends",
-      "completed": true,
-      "userId": 8
+      "completed": false,
+      "userId": 8,
+      "author": "Ewell Mueller"
     },
     {
       "id": 39,
@@ -567,7 +568,7 @@
     {
       "id": 100,
       "todo": "Learn a new programming language",
-      "completed": true,
+      "completed": false,
       "userId": 1,
       "author": "Terry Medhurst"
     },
@@ -859,15 +860,8 @@
       "userId": 32
     },
     {
-      "todo": "prova",
-      "completed": false,
-      "userId": 2,
-      "author": "Sheldon Quigley",
-      "id": 154
-    },
-    {
       "todo": "task prova",
-      "completed": true,
+      "completed": false,
       "userId": 1,
       "author": "Terry Medhurst",
       "id": 156
@@ -880,20 +874,6 @@
       "id": 157
     },
     {
-      "todo": "nuovo task",
-      "completed": false,
-      "userId": 2,
-      "author": "Sheldon Quigley",
-      "id": 158
-    },
-    {
-      "todo": "Prova task",
-      "completed": true,
-      "userId": 7,
-      "author": "Oleta Abbott",
-      "id": 159
-    },
-    {
       "todo": "Go to the cinema",
       "completed": true,
       "userId": 1,
@@ -901,11 +881,46 @@
       "id": 161
     },
     {
-      "todo": "Prepare lunch",
+      "todo": "Go out with friend",
+      "completed": false,
+      "userId": 2,
+      "author": "Sheldon Quigley",
+      "id": 163
+    },
+    {
+      "todo": "Prepare dinner",
+      "completed": false,
+      "userId": 4,
+      "author": "Miles Cummerata",
+      "id": 164
+    },
+    {
+      "todo": "Organize a trip",
+      "completed": false,
+      "userId": 3,
+      "author": "Terrill Hills",
+      "id": 167
+    },
+    {
+      "todo": "Prepare dinner",
+      "completed": false,
+      "userId": 3,
+      "author": "Terrill Hills",
+      "id": 168
+    },
+    {
+      "todo": "Test 13",
+      "completed": false,
+      "userId": 3,
+      "author": "Terrill Hills",
+      "id": 169
+    },
+    {
+      "todo": "Test",
       "completed": false,
       "userId": 1,
       "author": "Terry Medhurst",
-      "id": 162
+      "id": 170
     }
   ],
   "users": [
