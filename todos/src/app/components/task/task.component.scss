@@ -3,3 +3,12 @@ h6 {
   font-weight: 600;
   letter-spacing: -0.5px;
 }
+
+.card {
+  transition: all 250ms ease-in-out;
+}
+
+.card:hover {
+  scale: 1.05;
+  transform: translateY(-5px);
+}
