@@ -12,12 +12,14 @@ import {
   Subject,
 } from 'rxjs';
 import { iUser } from '../models/iuser';
+import { environment } from '../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TodoService {
-  apiUrl = 'http://localhost:3000/todos';
+  // apiUrl = 'http://localhost:3000/todos';
+  apiUrl = environment.todos;
 
   todosWithAuthor$ = new BehaviorSubject<iTodo[]>([]);
   query$ = new BehaviorSubject<string>('');

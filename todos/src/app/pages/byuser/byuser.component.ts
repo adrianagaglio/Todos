@@ -18,9 +18,9 @@ export class ByuserComponent implements OnInit {
 
   ngOnInit(): void {
     this.todos = this.todoSvc.todosWithAuthor$.getValue();
-    this.userSvc
-      .getUsersWithTodos(this.todos)
-      .subscribe((users) => this.users.push(...users));
+    this.userSvc.getUsersWithTodos(this.todos).subscribe((users) => {
+      this.users.push(...users);
+    });
     this.userSvc.usersWithTodos$.next(this.users);
   }
 
@@ -28,5 +28,12 @@ export class ByuserComponent implements OnInit {
     if (this.userSvc.query$.value) {
       this.users = this.userSvc.searchUser();
     }
+  }
+
+  orderMore() {
+    this.users.sort((a, b) => b.todos.length - a.todos.length);
+  }
+  orderLess() {
+    this.users.sort((a, b) => a.todos.length - b.todos.length);
   }
 }

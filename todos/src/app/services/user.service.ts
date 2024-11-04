@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { iUser } from '../models/iuser';
 import { BehaviorSubject, filter, map, Observable } from 'rxjs';
 import { iTodo } from '../models/itodo';
+import { environment } from '../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +11,8 @@ import { iTodo } from '../models/itodo';
 export class UserService {
   constructor(private http: HttpClient) {}
 
-  apiUrl = 'http://localhost:3000/users';
+  // apiUrl = 'http://localhost:3000/users';
+  apiUrl = environment.users;
 
   usersWithTodos$ = new BehaviorSubject<iUser[]>([]);
   query$ = new BehaviorSubject<string>('');

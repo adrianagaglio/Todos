@@ -1,3 +1,16 @@
+<div class="container">
+  <div class="d-flex align-items-center">
+    <p class="mb-0 me-2">Order:</p>
+    <div class="btn-group">
+      <button class="btn btn-primary btn-sm" (click)="orderMore()">
+        <i class="fa-solid fa-arrow-down-wide-short"></i>
+      </button>
+      <button class="btn btn-primary btn-sm" (click)="orderLess()">
+        <i class="fa-solid fa-arrow-down-short-wide"></i>
+      </button>
+    </div>
+  </div>
+</div>
 <div *ngIf="users.length > 0" class="container py-3">
   <div class="row row-cols-1 row-cols-lg-2 g-5">
     <div *ngFor="let user of users" class="col">

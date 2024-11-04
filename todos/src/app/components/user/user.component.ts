@@ -45,6 +45,7 @@ export class UserComponent implements OnInit {
       this.user.todos.push(newTask);
     });
     this.show = false;
+    this.newTask = '';
   }
 
   ngDoCheck() {

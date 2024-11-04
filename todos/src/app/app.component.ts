@@ -18,12 +18,13 @@ export class AppComponent {
 
   ngOnInit() {
     this.userSvc.getUsers().subscribe((users) => {
-      this.users.push(...users);
+      this.users = users;
+      this.userSvc.usersWithTodos$.next(this.users);
     });
 
-    this.todoSvc
-      .getTodosWithAuthor(this.users)
-      .subscribe((todos) => this.todos.push(...todos));
-    this.todoSvc.todosWithAuthor$.next(this.todos);
+    this.todoSvc.getTodosWithAuthor(this.users).subscribe((todos) => {
+      this.todos = todos;
+      this.todoSvc.todosWithAuthor$.next(this.todos);
+    });
   }
 }
