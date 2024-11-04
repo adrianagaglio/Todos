@@ -22,6 +22,8 @@ export class HomeComponent implements OnInit {
   ngDoCheck() {
     if (this.todoSvc.query$.value) {
       this.todos = this.todoSvc.searchTodo();
+    } else {
+      this.todos = this.todoSvc.todosWithAuthor$.getValue();
     }
   }
 }

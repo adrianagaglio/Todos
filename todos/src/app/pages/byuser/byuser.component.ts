@@ -27,6 +27,8 @@ export class ByuserComponent implements OnInit {
   ngDoCheck() {
     if (this.userSvc.query$.value) {
       this.users = this.userSvc.searchUser();
+    } else {
+      this.users = this.userSvc.usersWithTodos$.getValue();
     }
   }
 

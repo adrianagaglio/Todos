@@ -20,6 +20,8 @@ export class UncompletedComponent {
     this.todos = this.todoSvc.getUncompleted();
     if (this.todoSvc.query$.value) {
       this.todos = this.todoSvc.searchTodo().filter((todo) => !todo.completed);
+    } else {
+      this.todos = this.todoSvc.getUncompleted();
     }
   }
 }

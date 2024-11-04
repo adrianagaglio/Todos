@@ -18,14 +18,22 @@
         <div class="ms-auto"><app-form-modal></app-form-modal></div>
       </div>
 
-      <form class="py-3">
-        <input
-          class="input-group-text w-100 text-start"
-          type="text"
-          name="search"
-          placeholder="Search for a task or a user"
-          [(ngModel)]="query"
-        />
+      <form class="py-3" #form="ngForm">
+        <div class="d-flex gap-1">
+          <input
+            class="input-group-text w-100 text-start"
+            type="text"
+            name="search"
+            placeholder="Search for a task or a user"
+            [(ngModel)]="query"
+          />
+          <button
+            (click)="clean()"
+            class="btn btn-danger btn-sm text-light fw-medium"
+          >
+            Clean
+          </button>
+        </div>
       </form>
     </div>
   </div>

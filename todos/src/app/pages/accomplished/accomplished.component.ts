@@ -21,6 +21,8 @@ export class AccomplishedComponent implements OnInit {
     this.todos = this.todoSvc.getCompleted();
     if (this.todoSvc.query$.value) {
       this.todos = this.todoSvc.searchTodo().filter((todo) => todo.completed);
+    } else {
+      this.todos = this.todoSvc.getCompleted();
     }
   }
 }
