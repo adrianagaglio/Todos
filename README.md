@@ -8,7 +8,7 @@ Basic team todo list demo web app.
 
 Permette:
 - operazioni CRUD
-- inserimento nuovo utente per assegnazione dei task
+- inserimento nuovi utenti per assegnazione dei task
 
 Tecnologie utilizzate:
 - Angular
