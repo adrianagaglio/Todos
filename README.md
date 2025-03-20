@@ -1,4 +1,4 @@
-# Todos Web App (Demo)
+# Team Todos Web App (Demo)
 
 Progetto generato con [Angular CLI](https://github.com/angular/angular-cli) versione 18.2.7.
 
