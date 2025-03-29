@@ -21,7 +21,7 @@ Dati:
 
 - Se non hai Docker installato, segui le istruzioni dal sito ufficiale: [Docker](https://docs.docker.com/desktop/)
 - Esegui `docker build . -t todos-app` per creare l'immagine dell'applicazione con tutte le dipendenze necessarie al suo funzionamento
-- Esegui `docker -d --name todos-app-container -p 4200:80 todos-app:lates` per creare ed eseguire il container per avviare l'applicazione
+- Esegui `docker -d --name todos-app-container -p 4200:80 todos-app:latest` per creare ed eseguire il container per avviare l'applicazione
 - Naviga `http://localhost:4200/`
 
 ## Eseguire l'applicazione sulla tua macchina locale
